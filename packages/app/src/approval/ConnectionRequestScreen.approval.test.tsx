@@ -118,6 +118,7 @@ describe("ConnectionRequestScreen (6.1 connection request)", () => {
 
     const img = container.querySelector("img") as HTMLImageElement | null;
     expect(img?.src).toBe("https://permaswap.example/logo.png");
+    expect(img?.getAttribute("referrerpolicy")).toBe("no-referrer");
   });
 
   it("falls back to the origin-derived letter tile when the logo fails to load", () => {
