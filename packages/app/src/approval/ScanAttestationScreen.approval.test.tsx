@@ -73,6 +73,7 @@ describe("ApprovalRoot: scan attestation", { timeout: 30_000 }, () => {
     expect(screen.getByText("claude-opus-5-5")).toBeTruthy();
     expect(screen.getByText(PREVIEW.commit)).toBeTruthy();
     expect(screen.getByText("addr-1")).toBeTruthy();
+    expect(screen.getByText(PREVIEW.message)).toBeTruthy();
     expect(screen.getByText("Pass: the agent filed nothing")).toBeTruthy();
     for (const answer of PREVIEW.answers) expect(screen.getByText(answer.check)).toBeTruthy();
     expect(screen.getByTestId("attestation-report").textContent).toBe(PREVIEW.report);

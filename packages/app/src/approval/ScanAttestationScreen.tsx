@@ -262,6 +262,10 @@ function AttestationReview({
         <span className="break-all font-mono text-caption text-foreground">{preview.attestationId}</span>
       </Field>
 
+      <Field label={t("approval.message")}>
+        <span className="break-all font-mono text-caption text-foreground">{preview.message}</span>
+      </Field>
+
       {checkError ? (
         <p role="alert" className="text-center text-label leading-relaxed text-warning">
           {checkError}
